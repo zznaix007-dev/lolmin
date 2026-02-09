@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>RemoteAdmin — Consent</title></head>
+  <body>
+    <h2>RemoteAdmin Agent</h2>
+    <p>This machine will allow remote support with your consent. Click Accept to continue.</p>
+    <button id="accept">Accept</button>
+    <script>
+      const { ipcRenderer } = require('electron');
+      document.getElementById('accept').onclick = () => {
+        // store consent and start
+        const { remote } = require('electron');
+        ipcRenderer.send('consent-given');
+        window.close();
+      };
+    </script>
+  </body>
+</html>
+
