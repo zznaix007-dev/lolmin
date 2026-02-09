@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Remote Admin — Operator UI (PoC)</title>
+    <style>
+      body { font-family: Arial, Helvetica, sans-serif; margin: 16px; }
+      #screen { border: 1px solid #ccc; max-width: 100%; }
+    </style>
+  </head>
+  <body>
+    <h2>Operator UI — PoC</h2>
+    <div>
+      <label>Username: <input id="username" /></label>
+      <label>Operator password: <input id="pw" type="password" /></label>
+      <button id="login">Login</button>
+    </div>
+    <div>
+      <label>Agent ID to watch: <input id="agentId" /></label>
+      <button id="watch">Watch</button>
+    </div>
+    <h3>Live screen</h3>
+    <img id="screen" />
+    <h3>Processes</h3>
+    <button id="listProc">Request process list</button>
+    <ul id="procList"></ul>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>
