@@ -1,0 +1,13 @@
+.env
+node_modules/
+dist/
+**/dist/
+*.pfx
+*.pem
+config/certs/
+storage/records/
+logs/
+.vscode/
+/.cache
+npm-debug.log
+yarn-error.log
