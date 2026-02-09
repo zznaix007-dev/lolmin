@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Operator — RemoteAdmin</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 12px; }
+      #screen { border: 1px solid #ccc; max-width: 100%; height: 360px; display:block; }
+      #controls { margin-top: 8px; display:flex; gap:8px; align-items:center; }
+      #procList { max-height: 200px; overflow:auto; border:1px solid #ddd; padding:8px; }
+      #chat { border:1px solid #ddd; padding:8px; height:200px; overflow:auto; }
+    </style>
+  </head>
+  <body>
+    <h2>RemoteAdmin — Operator</h2>
+    <div>
+      <label>Server URL: <input id="server" value="https://localhost:8443" size="30"/></label>
+      <label>Username: <input id="username" /></label>
+      <label>Password: <input id="pw" type="password" /></label>
+      <button id="login">Login</button>
+    </div>
+    <div id="controls">
+      <label>Agent ID: <input id="agentId" /></label>
+      <button id="watch">Watch</button>
+      <button id="listProc">Request process list</button>
+    </div>
+
+    <h3>Live screen</h3>
+    <video id="screen" autoplay playsinline style="border:1px solid #ccc; width:100%; height:360px"></video>
+
+    <h3>Processes</h3>
+    <div id="procList"></div>
+
+    <h3>Chat / Remote support</h3>
+    <div id="chat"></div>
+    <input id="chatInput" style="width:80%"/><button id="sendChat">Send</button>
+
+    <script src="../public/client.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
+
