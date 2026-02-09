@@ -1,0 +1,10 @@
+filebeat.inputs:
+- type: log
+  paths:
+    - C:/Users/CS/lolrat/logs/*.log
+  json.keys_under_root: true
+  json.add_error_key: true
+
+output.elasticsearch:
+  hosts: ["http://localhost:9200"]
+
